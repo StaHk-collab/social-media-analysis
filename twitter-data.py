@@ -42,7 +42,7 @@ df.to_csv('ED.csv') # Random Data
 
 data1 = pd.read_csv('ED.csv')
 
-data1 = data1[data1['Tweet'].str.contains('BMI | CW | LW | HW | GW | UGW | kg | lbs', case=False)]
+data1['ED-ed'] = data1['Tweet'].str.contains('BMI | CW | LW | HW | GW | UGW | kg | lbs', case=False)
 
 data1.to_csv('final.csv') # ED data
 
