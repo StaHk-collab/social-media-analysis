@@ -87,10 +87,12 @@ d1['Followees'] = df1['Followees']
 d1['Engagement (Random)'] = df1['Engagement (Random)']
 d1['Activity (Random)'] = df1['Activity (Random)']
 d1['Interaction Diversity (Random)'] = df1['H(u, I)']
+d1['Ed-ed'] = df2['Ed-ed'].astype(int)
 d1.to_csv('d1.csv')
 
 # ED (Pred)
 d2 = pd.DataFrame()
+d2['S.No.'] = df2['Unnamed: 0']
 d2['#Tweets'] = df2['#Tweets']
 d2['#Re-Tweets'] = df2['#Re-Tweets']
 d2['Followers'] = df2['Followers']
@@ -103,13 +105,13 @@ d2.to_csv('d2.csv')
 # Classification
 
 # Assign values to the X and y variables:
-X = d1.iloc[:, 1:7].values
-y = d1.iloc[:, 0].values
+X = d1.iloc[:, :7].values
+y = d1.iloc[:, 7].values
 
 print(X.shape, y.shape)
 
 # Split dataset into random train and test subsets:
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 
 # # Standardize features by removing mean and scaling to unit variance:
 # scaler = StandardScaler()
@@ -134,28 +136,28 @@ y_predict = classifier.predict(X_test)
 print('f1 score :', metrics.f1_score(y_test, y_predict, average='weighted', labels=np.unique(y_predict)))
 print('accuracy_score :', metrics.accuracy_score(y_test, y_predict, normalize=True, sample_weight=None))
 
-clf = svm.SVC(kernel='linear', C=1).fit(X_train, y_train)
-print('clf score :', clf.score(X_test, y_test))
+# clf = svm.SVC(kernel='linear', C=1).fit(X_train, y_train)
+# print('clf score :', clf.score(X_test, y_test))
 
-clf = svm.SVC(kernel='linear', C=1, random_state=42)
-scores = cross_val_score(clf, X, y, cv=5)
-print('CV score :', scores)
+# clf = svm.SVC(kernel='linear', C=1, random_state=42)
+# scores = cross_val_score(clf, X, y, cv=5)
+# print('CV score :', scores)
 
-print("%0.2f accuracy with a standard deviation of %0.2f" % (scores.mean(), scores.std()))
+# print("%0.2f accuracy with a standard deviation of %0.2f" % (scores.mean(), scores.std()))
 
+# ROC
+y_scores = classifier.predict_proba(X_test)
+fpr, tpr, threshold = roc_curve(y_test, y_scores[:, 1])
+roc_auc = auc(fpr, tpr)
 
-# y_scores = classifier.predict_proba(X_test)
-# fpr, tpr, threshold = roc_curve(y_test, y_scores[:, 1])
-# roc_auc = auc(fpr, tpr)
-
-# plt.title('ED-Random Classification')
-# plt.plot(fpr, tpr, 'b')
-# plt.legend(loc = 'lower right')
-# plt.plot([0, 1], [0, 1],'r--')
-# plt.xlim([0, 1])
-# plt.ylim([0, 1])
-# plt.ylabel('True Positive Rate')
-# plt.xlabel('False Positive Rate')
-# plt.title('ROC Curve of kNN')
-# plt.show()
+plt.title('ED-Random Classification')
+plt.plot(fpr, tpr, 'b')
+plt.legend(loc = 'lower right')
+plt.plot([0, 1], [0, 1],'r--')
+plt.xlim([0, 1])
+plt.ylim([0, 1])
+plt.ylabel('True Positive Rate')
+plt.xlabel('False Positive Rate')
+plt.title('ROC Curve')
+plt.show()
 
