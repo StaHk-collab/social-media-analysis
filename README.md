@@ -52,7 +52,7 @@ After that they are stored in a csv file.
 
 ## Classification<a name="classify"></a>
 
-K Nearest Neighbour (KNN) and linear Support Vector Machine (SVM) classifiers are used to further verify the reliability of data sampling method. The best performing classifier is found to be linear SVM with the default settings in Scikit-learn 1.1.1 package, with an accuracy score of 99.62962962962963%
+K Nearest Neighbour (KNN) and linear Support Vector Machine (SVM) classifiers are used to further verify the reliability of data sampling method. The best performing classifier is found to be linear SVM with the default settings in Scikit-learn 1.1.1 package, with an accuracy score of *98.82%*
 
 ## ROC Curve<a name="curve"></a>
 
