@@ -5,7 +5,8 @@
 3. [Dataset Construction](#dataset)
 4. [Data Visualization](#visualize)
 5. [Classification](#classify)
-6. [Recources](#resources)
+6. [ROC Curve](#curve)
+7. [Recources](#resources)
 
 ## Project Motivation <a name="motivation"></a>
 
@@ -51,7 +52,13 @@ After that they are stored in a csv file.
 
 ## Classification<a name="classify"></a>
 
-K Nearest Neighbour (KNN) and linear Support Vector Machine (SVM) classifiers are used to further verify the reliability of data sampling method. The best performing classifier is found to be linear SVM with the default settings in Scikit-learn 1.1.1 package.
+K Nearest Neighbour (KNN) and linear Support Vector Machine (SVM) classifiers are used to further verify the reliability of data sampling method. The best performing classifier is found to be linear SVM with the default settings in Scikit-learn 1.1.1 package, with an accuracy score of 99.62962962962963%
+
+## ROC Curve<a name="curve"></a>
+
+<p align="center">
+  <img width="489" height="355" src="https://github.com/StaHk-collab/social-media-analysis/blob/main/Figures/Figure_5.png">
+</p>
 
 ## Resources<a name="resources"></a>
 
