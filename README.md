@@ -70,9 +70,13 @@ Dataset | User | Tweets | Tweets per User
 ED | 50 | 22809773 | 25344.192
 Random | 900 | 561709 | 11234.18
 
-<p align="left">  <p align="right">
-  <img width="489" height="355" src="https://github.com/StaHk-collab/social-media-analysis/blob/main/Figures/Figure_1.png">  <img width="489" height="355" src="https://github.com/StaHk-collab/social-media-analysis/blob/main/Figures/Figure_2.png">
-</p>  </p>
+<p align="center">
+  <img width="489" height="355" src="https://github.com/StaHk-collab/social-media-analysis/blob/main/Figures/Figure_1.png">
+</p>
+
+<p align="center">
+  <img width="489" height="355" src="https://github.com/StaHk-collab/social-media-analysis/blob/main/Figures/Figure_2.png">
+</p>
 
 <p align="center">
   <img width="489" height="355" src="https://github.com/StaHk-collab/social-media-analysis/blob/main/Figures/Figure_3.png">
