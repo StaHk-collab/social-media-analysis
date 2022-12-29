@@ -67,8 +67,8 @@ H(u, I) (Interaction Diversity) | 1.0796611544093487e-05 | 0.0001503722230505121
 
 Dataset | User | Tweets | Tweets per User
 --- | --- | --- | ---
-ED | 50 | 22809773 | 25344.192
-Random | 900 | 561709 | 11234.18
+Random | 942 | 22809773 | 24214.196
+ED | 50 | 561709 | 11234.18
 
 <p align="center">
   <img width="489" height="355" src="https://github.com/StaHk-collab/social-media-analysis/blob/main/Figures/Figure_1.png">
