@@ -74,18 +74,37 @@ Random | 900 | 561709 | 11234.18
   <img width="489" height="355" src="https://github.com/StaHk-collab/social-media-analysis/blob/main/Figures/Figure_1.png">  <img width="489" height="355" src="https://github.com/StaHk-collab/social-media-analysis/blob/main/Figures/Figure_2.png">
 </p>  </p>
 
-<p align="left">
+<p align="center">
   <img width="489" height="355" src="https://github.com/StaHk-collab/social-media-analysis/blob/main/Figures/Figure_3.png">
 </p>
 
 ## Classification<a name="classify"></a>
 
-K Nearest Neighbour (KNN) and linear Support Vector Machine (SVM) classifiers are used to further verify the reliability of data sampling method. The best performing classifier is found to be linear SVM with the default settings in Scikit-learn 1.1.1 package, with an accuracy score of *98.82%*
+K Nearest Neighbour (KNN) and linear Support Vector Machine (SVM) classifiers are used to further verify the reliability of data sampling methods.
+
+### Performance of Predicting the classes of ED-Random Users :
+
+Measure | ED-Random
+--- | ---
+Accuracy | 0.951
+Precision | 0.95
+Recall | 1.00
+F1 | 0.974
+
+
 
 ## ROC Curve<a name="curve"></a>
 
+#### AUC : 64.923%
+
 <p align="center">
-  <img width="489" height="355" src="https://github.com/StaHk-collab/social-media-analysis/blob/main/Figures/Figure_5.png">
+  <img width="489" height="355" src="https://github.com/StaHk-collab/social-media-analysis/blob/main/Figures/Figure_4.png">
+</p>
+
+#### Logistic Regression (AUC : 64.365%)
+
+<p align="center">
+  <img width="489" height="355" src="https://github.com/StaHk-collab/social-media-analysis/blob/main/Figures/Figure_6.png">
 </p>
 
 ## Resources<a name="resources"></a>
