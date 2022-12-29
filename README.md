@@ -66,7 +66,7 @@ H(u, I) (Interaction Diversity) | 1.0796611544093487e-05 | 0.0001503722230505121
 ### Statistics of no. of users, no. of tweets, and average no. of tweets per user :
 
 Dataset | User | Tweets | Tweets per User
---- | --- | --- | ---
+---- | ---- | ---- | ----
 Random | 942 | 22809773 | 24214.196
 ED | 50 | 561709 | 11234.18
 
